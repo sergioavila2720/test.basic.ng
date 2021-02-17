@@ -18,6 +18,12 @@
 
     .nation-div {
         margin-right: 12px;
+
+    }
+    .nation-div:hover {
+       width: 102%;
+       .nation{
+       background-color: black !important;}
     }
     .nation {
         width: 128px;
@@ -52,4 +58,8 @@
 .info {
     width: 100%;
     border: 1px dashed lightgray;
+}
+
+.fade{
+opacity: 0.5;
 }

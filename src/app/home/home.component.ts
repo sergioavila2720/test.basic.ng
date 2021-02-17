@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit,OnDestroy
 {
     nations: Nation[] = [];
     hilitedName = '...';
+    selected_nation:Nation = <Nation>{};
 
     constructor(
         private http:HttpClient,
@@ -33,5 +34,10 @@ export class HomeComponent implements OnInit,OnDestroy
     }
 
     ngOnDestroy(): void {
+    }
+
+    click_nation(nation:Nation){
+      this.selected_nation = nation;
+      this.changeDetectorRef.detectChanges();
     }
 }
